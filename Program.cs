@@ -6,8 +6,8 @@
         Console.WriteLine("EL COCHE ES: ");
         Coche coche = new Coche("Modelo", "Marca", 1000, 2020, 2021, "Fecha", 1000, true);
         Console.WriteLine("Precio de venta: ");
-        Console.WriteLine(coche.calcularPrecioVenta(1000));
-        coche.consultarDatosCoche();
+        Console.WriteLine(coche.CalcularPrecioVenta(1000));
+        coche.ConsultarDatosCoche();
         Console.WriteLine("---------------------------------");
 
         //EL PROVEEDOR ES:
