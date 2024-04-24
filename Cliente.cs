@@ -12,7 +12,6 @@ public class Cliente
         CantidadPaga = cantidadPaga;
         Senal = senal;
     }
-
     public void ConsultarDatosCliente()
     {
         Console.WriteLine("Nombre: " + Nombre);
@@ -39,5 +38,23 @@ public class Cliente
         Console.WriteLine("Cantidad de paga: " + cantidadPaga);
         Console.WriteLine("Senal: " + senal);
         listaCliente.Remove(dni);
+    }
+    public void ModificarDatosCliente(string nombreActual, string dniActual, double CantidadPagaActual, double SenalActual, string nuevoNombre, string nuevoDni, double nuevaCantidadPaga, double nuevaSenal, List<string> listaCliente) {
+        Console.WriteLine("Los datos del cliente que quieres modificar son: ");
+        Console.WriteLine("Nombre actual: " + nombreActual);
+        Console.WriteLine("DNI actual: " + dniActual);
+        Console.WriteLine("Cantidad de paga actual: " + CantidadPagaActual);
+        Console.WriteLine("Senal actual: " + SenalActual);
+        listaCliente.Remove(dniActual);
+        Nombre = nuevoNombre;
+        Dni = nuevoDni;
+        CantidadPaga = nuevaCantidadPaga;
+        Senal = nuevaSenal;
+        Console.WriteLine("Los nuevos datos son:");
+        Console.WriteLine("Nuevo nombre: " + nuevoNombre);
+        Console.WriteLine("Nuevo DNI: " + nuevoDni);
+        Console.WriteLine("Nueva cantidad de paga: " + nuevaCantidadPaga);
+        Console.WriteLine("Nueva senal: " + nuevaSenal);
+        listaCliente.Add(nuevoDni);
     }
 }
