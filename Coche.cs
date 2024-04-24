@@ -18,10 +18,21 @@ public class Coche{
         Probado = probado;
     }
     public double CalcularPrecioVenta(double precioCompra){
-        return precioCompra * 0.3;
+        double precioVenta = precioCompra + (precioCompra * 0.3);
+        return precioVenta;
     }
     public double ConsultarPrecioCompra(){
         return PrecioCompra;
+    }
+    public void ModificarDatosCoche(string modelo, string marca, int kilometros, int anoFabricacion, int anoMatriculacion, string fechaCompra, double precioCompra, bool probado){
+        Modelo = modelo;
+        Marca = marca;
+        Kilometros = kilometros;
+        AnoFabricacion = anoFabricacion;
+        AnoMatriculacion = anoMatriculacion;
+        FechaCompra = fechaCompra;
+        PrecioCompra = precioCompra;
+        Probado = probado;
     }
     public void ConsultarDatosCoche(){
         Console.WriteLine("Modelo: " + Modelo);
@@ -36,3 +47,7 @@ public class Coche{
         Console.WriteLine("---------------------------------");
     }
 }
+
+
+
+
